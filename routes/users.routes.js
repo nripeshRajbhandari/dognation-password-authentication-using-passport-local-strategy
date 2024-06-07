@@ -40,18 +40,26 @@ router.post("/login", passport.authenticate("local", { failureRedirect: "login" 
 });
 
 // Log out user:
-router.get("/logout", (req, res, next) => {
+// router.get("/logout", (req, res, next) => {
+//   console.log('executing logout');
+//   req.logout((err)=>{
+//     if(err) {
+//         console.log('inside logout error..');
+//         return next(err);
+//     }
+//     console.log('logout err cleared...');
+//     return res.redirect("/");
+//   });
+//   //res.redirect("/login");
+// });
+
+
+router.get("/logout", (req, res) => {
   console.log('executing logout');
-  req.logout((err)=>{
-    if(err) {
-        console.log('inside logout error..');
-        return next(err);
-    }
-    console.log('logout err cleared...');
-    return res.redirect("/");
-  });
-  //res.redirect("/login");
+  req.logout();
+  res.redirect("/");
 });
+
 
 //use URL localhost:4001/users/register
 router.get("/register", (req, res) => {
