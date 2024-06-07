@@ -15,6 +15,7 @@ const userExists = async (username) => {
 
 const findById = function (id, cb) {
   process.nextTick(function () {
+    console.log(`inside findById to find id:${id}`);
     var idx = id - 1;
     if (users[idx]) {
       cb(null, users[idx]);

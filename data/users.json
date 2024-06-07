@@ -1,6 +1,1 @@
-[
-{"id":1,"usernae":"john@codecademy.com","password":"$2a$09$pTY64HFYA5mQ2eMxSYYk.ucarnMn3A0Zv2rLab/ltpCjsf1myt3Gy"},
-{"id":2,"username":"saskia@email.com","password":"$2a$09$Y9EpSoJ5ki0g8VBLfedbUuwCanmEAxOJzIUn4OVVtA7uzZLm6ltsW"},
-{"id":3,"password":"$2b$10$E5yVR1aSR5f0N/8n.zpCNuD98LQnUOv0s6AVT2aU8gntjiK0taldK","username":"lola"},
-{"id":4,"username":"carlosg","password":"$2b$10$Q1B3QwKoaHnm682Bj4FTIenCYOfIL/SyTEzBX/JBJ7lJIz5b9sapG"}
-]
+[{"id":1,"usernae":"john@codecademy.com","password":"$2a$09$pTY64HFYA5mQ2eMxSYYk.ucarnMn3A0Zv2rLab/ltpCjsf1myt3Gy"},{"id":2,"username":"saskia@email.com","password":"$2a$09$Y9EpSoJ5ki0g8VBLfedbUuwCanmEAxOJzIUn4OVVtA7uzZLm6ltsW"},{"id":3,"password":"$2b$10$E5yVR1aSR5f0N/8n.zpCNuD98LQnUOv0s6AVT2aU8gntjiK0taldK","username":"lola"},{"id":4,"username":"carlosg","password":"$2b$10$Q1B3QwKoaHnm682Bj4FTIenCYOfIL/SyTEzBX/JBJ7lJIz5b9sapG"},{"id":5,"username":"nripesh","password":"nripesh"},{"id":6,"username":"xyz","password":"xyz"},{"id":7,"username":"nripesh@gmail.com","password":"$2b$10$bcg/jb8eXem1j1gbxK24zuGy5LLxHultzCNSBmMjljtPehaqBnP8W"},{"id":8,"username":"roshani","password":"$2b$10$aQr6lO6ckaky2KcF.Tkdsu2WeZKYWUFXuQ7EqnNe2KMCQgYgrb94G"},{"id":9,"username":"aavyan","password":"$2b$10$ivfI0mxlosNFT3C1n6zt5uv477RJp54FBogxsb61O7SW8naC7r5G."}]

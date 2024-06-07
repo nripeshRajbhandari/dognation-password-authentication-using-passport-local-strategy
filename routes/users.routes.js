@@ -17,8 +17,11 @@ router.post("/register", async (req, res) => {
       return res.redirect("login");
     }
     // Hash password before storing in local DB:
+    const salt = await bcrypt.genSalt(10);
 
-    const newUser = { ...id, username, password: password };
+    const hashedPassword = await bcrypt.hash(password,salt);
+
+    const newUser = { ...id, username, password: hashedPassword };
 
     // Store new user in local DB
     await users.push(newUser);
@@ -31,19 +34,31 @@ router.post("/register", async (req, res) => {
 });
 
 // Log In User:
-router.post("/login", (req, res) => {
-  res.redirect("../");
+router.post("/login", passport.authenticate("local", { failureRedirect: "login" }) ,(req, res) => {
+  console.log('inside LOGIN POST method !!');
+  res.redirect("/");
 });
 
 // Log out user:
-router.get("/logout", (req, res) => {
-  res.redirect("../");
+router.get("/logout", (req, res, next) => {
+  console.log('executing logout');
+  req.logout((err)=>{
+    if(err) {
+        console.log('inside logout error..');
+        return next(err);
+    }
+    console.log('logout err cleared...');
+    return res.redirect("/");
+  });
+  //res.redirect("/login");
 });
 
+//use URL localhost:4001/users/register
 router.get("/register", (req, res) => {
   res.render("register");
 });
 
+//use URL localhost:4001/users/login
 router.get("/login", (req, res) => {
   res.render("login");
 });
